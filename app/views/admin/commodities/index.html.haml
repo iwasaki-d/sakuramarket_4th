@@ -1,0 +1,29 @@
+%h1 Listing commodities
+
+%table.table
+  %thead
+    %tr
+      %th 名前
+      %th 説明
+      %th 価格
+      %th 表示
+      %th 表示順
+      %th
+      %th
+      %th
+
+  %tbody
+    - @commodities.each do |commodity|
+      %tr
+        %td= commodity.name
+        %td= commodity.description
+        %td= commodity.price
+        %td= commodity.enabled_view
+        %td= commodity.position
+        %td= link_to 'Show', [:admin, commodity]
+        %td= link_to 'Edit', edit_admin_commodity_path(commodity)
+        %td= link_to 'Destroy', [:admin, commodity], :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Commodity', new_admin_commodity_path

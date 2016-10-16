@@ -13,7 +13,12 @@ gem 'turbolinks'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'haml-rails'
-gem 'erb2haml'
+
+gem 'devise'
+gem 'simple_form'
+gem 'bootstrap-sass'
+gem 'default_value_for'
+gem 'jquery-ui-rails'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
@@ -24,6 +29,8 @@ gem 'erb2haml'
 
 group :development, :test do
   gem 'byebug'
+  gem 'rspec-rails'
+  gem 'factory_girl'
 end
 
 group :development do

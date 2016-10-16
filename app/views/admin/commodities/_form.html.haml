@@ -1,0 +1,10 @@
+= simple_form_for([:admin, @commodity]) do |f|
+  = f.error_notification
+  .form-inputs
+    = f.input :name
+    = f.input :description
+    = f.input :price
+    = f.input :position
+    = f.input :enabled_view
+  .form-actions
+    = f.button :submit

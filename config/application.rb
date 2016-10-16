@@ -31,7 +31,7 @@ module Sakuramarket4th
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
-    
+
     config.generators do |g|
       g.orm :active_record
       g.assets false
@@ -44,5 +44,8 @@ module Sakuramarket4th
                        helper_specs: false,
                        integration_tool: false
     end
+
+    config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
   end
 end
